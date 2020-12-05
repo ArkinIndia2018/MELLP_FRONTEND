@@ -1,0 +1,501 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Man Engineering</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
+   
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+   
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="myCss/image-upload.css">
+    
+    <script src="./JS/applicationSettings.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/1.3.1/js/toastr.js"></script>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/1.3.1/css/toastr.css" />
+   
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+          $(function () {
+          
+          $("#shareIssuingDate").datepicker({
+              changeMonth: true,
+              changeYear: true,
+              yearRange: "-100:+0",
+             // numberOfMonths: [2, 2],
+              dateFormat: 'dd/mm/yy'
+          });
+
+        
+
+      });
+    </script>
+    <script>
+        $(document).ready( function () {
+            AppliationSettingsGet();
+        } );
+    </script>
+    <!-- <style type="text/css">
+      #txtPromotionDate
+        {
+            background-image: url(https://i.imgur.com/u6upaAs.png);
+            background-repeat: no-repeat;
+            padding-left: 25px;
+        }
+        </style> -->
+</head>
+
+<body>
+
+
+   
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./">Dynamic Logo</a>
+                
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="dashboard.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Master Record</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="CompanyProfile.html">Company Profile</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="PaidUpCapital.html">Paid-up/Authorised Capital</a></li>
+                            <li><i class="fa fa-bars"></i><a href="#">Member Groupes</a></li>
+                            <li><i class="fa fa-share-square-o"></i><a href="DirectorsAndPromoters.html">Directores/Promoters</a></li>
+                            <li><i class="fa fa-id-card-o"></i><a href="Members.html">Members</a></li>
+                            <li><i class="fa fa-exclamation-triangle"></i><a href="#">Form 15G/15H</a></li>
+                            <li><i class="fa fa-spinner"></i><a href="#">Un-Encumbered Deposit</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Share Management</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="#">Transfer Share</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Allocate Share</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="menu-icon ti-email"></i>Single Deposit Window </a>
+                    </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Saving Accounts</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="#">Scheme</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Saving Account Application</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Approve Application</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Saving Account</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Virtual Account</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Recurring Deposit</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="#">RD Calculator</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Scheme</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Recurring Deposit Application</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Approve Application</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Recurring Deposite Account</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Fixed Deposit</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="#">Calculator</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">Scheme</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">FD Deposit Application</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">Approve Application</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">FD Deposite</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>MIS</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="#">Calculator</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">Scheme</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">MIS Deposit Application</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">Approve Application</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">MIS Application</a></li>
+                        </ul>
+                    </li>
+                   
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Gold Loan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="#">Calculator</a></li>
+                            <li><i class="menu-icon fa fa-area-chart"></i><a href="#">Scheme</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="#">Application</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="#">Approve Application</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="#">Disburse Application</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="#">Loan Accounts</a></li>
+                            
+                        </ul>
+                    </li>
+
+                  
+                </ul>
+            </div>
+        </nav>
+    </aside>
+
+    
+    <div id="right-panel" class="right-panel">
+
+            <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+
+                      
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+
+                        
+
+                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                    <div class="language-select dropdown" id="language-select">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
+                            <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
+                        
+                        </a>
+                        <div class="user-menu dropdown-menu">
+                            <li>
+                            <a class="nav-link" href="AccountSeries.html"><i class="fa fa-user"></i> Account Series</a>
+                        </li>
+
+                            <a class="nav-link" href="userManagement.html"><i class="fa fa-user"></i> User Management </a>
+
+                            <a class="nav-link" href="ApplicationSetting.html"><i class="fa fa-cog"></i> Application Setting</a>
+
+                            <a class="nav-link" href="SmsSetting.html"><i class="fa fa-cog"></i> SMS Setting</a>
+                            <a class="nav-link" href="emailSetting.html"><i class="fa fa-cog"></i> Email Setting</a>
+                            <a class="nav-link" href="tnc.html"><i class="fa fa-cog"></i> Terms & Conditions</a>                        
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Application Setting</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li class="active"><a href="dashboard.html"> Dashboard</a> > Application Setting</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+       
+          
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container">  
+                            <div class="row">
+                             <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="email">Face Value:</label>
+                                    <input type="number" id="faceValue" step="any" value="10.00" class="form-control" min=0 oninput="validity.valid||(value='');">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="pwd">Share Cert. Issuing Dt:</label>
+                                    <input type="text" autocomplete="off"  id="shareIssuingDate" class="form-control required" />
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="pwd">First Authorised Signatory:</label>
+                                    <select id="firstSignatory" name="firstSignatory" class="form-control required">
+                                        <option value="someOne">A</option>
+                                        <option value="someOneB">B</option>
+                                        <option value="someOne">C</option>
+                                        <option value="someOne">D</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="pwd">Second Authorised Signatory:</label>
+                                    <select id="secondSignatory" name="secondSignatory" class="form-control required">
+                                        <option value="someOne">A</option>
+                                        <option value="someOne">B</option>
+                                        <option value="someOne">C</option>
+                                        <option value="someOne">D</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="pwd">Promoter for Share Transfer to New Member:</label>
+                                    <select id="promotorShareTransfer" name="promotor" class="form-control required">
+                                        <option value="someOne">A</option>
+                                        <option value="someOne">B</option>
+                                        <option value="someOne">C</option>
+                                        <option value="someOne">D</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="pwd">Letter Head Title-1:</label>
+                                    <input type="text" class="form-control" id="letterHeadFirst">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="pwd">Letter Head Title-2:</label>
+                                    <input type="text" class="form-control" id="letterHeadSecond">
+                                  </div>
+                                
+                               
+                             </div>
+                             <div class="col-md-6">
+                                <div class="imageupload panel panel-default">
+                                    <!-- <div class="panel-heading clearfix">
+                                        <h3 class="panel-title pull-left">Select Logo</h3>
+
+                                    </div> -->
+                                    <div class="file-tab panel-body">
+                                        <label class="btn btn-default btn-file">
+                                            <input type="file" id="profileimage" name="image-file">
+                                            <!-- @Html.TextBoxFor(model => model.ImageFile, new { @id = "profileimage", @name = "image-file", type = "file" })
+                                            @Html.ValidationMessageFor(model => model.ImageFile, "", new { @class = "text-danger" }) -->
+
+                                        </label>
+                                        <button type="button" class="btn btn-default">Remove</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            </div>
+                            <div class="row" style="margin-top:20px">
+                                <div class="col-md-4">
+                                <div class="card" style="width:300px">
+                                    <div class="card-body">
+                                        <div style="border-bottom: 1px solid silver;">Bond Settings</div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="true" id="letterHeadFdBond"> Show letter head in FD Bond</label>
+                                          </div>
+                                          <div class="checkbox">
+                                            <label><input type="checkbox" value="true" id="letterHeadRdBond"> Show letter head in RD Bond</label>
+                                          </div>
+                                          <div class="checkbox">
+                                            <label><input type="checkbox" value="true" id="letterHeadMisBond">Show letter head in MIS Bond</label>
+                                          </div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="width:300px">
+                                    <div class="card-body">
+                                        <div style="border-bottom: 1px solid silver;">Cash Receipt Settings</div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" id="letterHeadTopMarginStatus" value="true"> Show letter head
+                                                Top Margin (Px) [100px=1.66 inch]</label>
+                                          </div>
+                                          <div>
+                                            <input type="number" id="letterHeadTopMarginValue" step="any" value="150" class="form-control" min=0 oninput="validity.valid||(value='');">
+                                           
+                                          </div>
+                                          <div class="checkbox">
+                                            <label><input type="checkbox" id="associateNameStatus" value="true"> Show Associate Name</label>
+                                          </div>
+                                          <div>
+                                              <label>Receipt Format</label>
+                                            <select id="receipetFormat" name="promotor" class="form-control required">
+                                                <option value="Format 1">Format 1</option>
+                                                <option value="Format 2">Format 2</option>
+                                                <option value="Format 3">Format 3</option>
+                                                <option value="Format 4">Format 4</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="width:300px">
+                                    <div class="card-body">
+                                        <div style="border-bottom: 1px solid silver;">Other Settings</div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" id="otpWithdrawl"> OTP on withdrawl from Saving Account
+                                                Auto approval limit for transaction</label>
+                                          </div>
+                                          <div>
+                                              <label>Auto approval limit for transaction</label>
+                                            <input type="number" id="autoApprovalLimitForTransaction" class="form-control">
+                                          </div>
+                                          <div class="checkbox">
+                                            <label>Auto approval limit for collect payment
+                                          </div>
+                                          <div>
+                                            <input type="text" class="form-control" id="autoApprovalLimitForPaymentCollection">
+                                          </div>
+                                          <div class="checkbox">
+                                            <label>Auto approval limit for Payout
+                                          </div>
+                                          <div>
+                                            <input type="text" class="form-control" id="autoApprovalLimitPayout">
+                                          </div>
+                                          <div class="checkbox">
+                                            <label>Application Theme
+                                          </div>
+                                          <div>
+                                            <input type="text" class="form-control" id="applicationTheme">
+                                          </div>
+                                          <div class="checkbox">
+                                            <label>Customer portal url
+                                          </div>
+                                          <div>
+                                            <input type="text" class="form-control" id="customerPortalUrl">
+                                          </div>
+                                          <div class="checkbox">
+                                            <label><input type="checkbox" value="true" id="twoFactorAuth"> Enable Two-factor authentication</label>
+                                          </div>
+                                          <div class="checkbox">
+                                            <label><input type="checkbox" id="duplicateMobileNumber" value="true"> Do not allow Duplicate Mobile No for Member</label>
+                                          </div>
+                                          <div class="checkbox">
+                                            <label><input type="checkbox" id="allowPenaltyCharges" value="true"> Allow user to edit Penalty charges</label>
+                                          </div>
+                                        
+                                      </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="row" style="margin-top:20px">
+                                <div class="col-md-4">
+                                    <div class="card" style="width:300px">
+                                        <div class="card-body">
+                                            <div style="border-bottom: 1px solid silver;">TDS Settings</div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="true" id="isTdsApplicable"> Is TDS Applicable</label>
+                                              </div>
+                                              <div>
+                                                  <label>TDS Rate (%)</label>
+                                                <input type="text" id="tdsRate" step="any" value="10" class="form-control" min=0 oninput="validity.valid||(value='');" >
+                                              </div>
+                                              <div>
+                                                <label>Tax Deduction limit</label>
+                                              <input type="text" id="taxDeductionLimit" step="any" class="form-control" min=0 oninput="validity.valid||(value='');">
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="saveAppliationSettings()">Save</button>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+ 
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="JS/imageUpload.js"></script>
+
+
+    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/widgets.js"></script>
+    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+ 
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+
+      
+    </script>
+
+
+</body>
+
+</html>

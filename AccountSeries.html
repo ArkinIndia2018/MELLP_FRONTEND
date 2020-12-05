@@ -1,0 +1,965 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Man Engineering</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+  
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./JS/AccountSeries.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/1.3.1/js/toastr.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/1.3.1/css/toastr.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        $(document).ready(function(){
+      $('#formateInDigitsSeriesConfigurationType').on('change', function() {
+          if(this.value == 'select')
+          {
+        $("#6").hide();
+        $("#7").hide();
+        $("#8").hide();
+        $("#9").hide();
+        $("#10").hide();
+        $("#11").hide();
+        $("#12").hide();
+        $("#13").hide();
+        $("#14").hide();
+        $("#15").hide();
+        $("#16").hide();
+        $("#17").hide();
+        $("#18").hide();
+        $("#19").hide();
+        $("#20").hide();
+        $("#21").hide();
+        $("#22").hide();
+        $("#23").hide();
+        $("#24").hide();
+        $("#25").hide();
+        $("#26").hide();
+        $("#27").hide();
+        $("#28").hide();
+        $("#29").hide();
+        $("#30").hide();
+        $("#31").hide();
+        $("#32").hide();
+        $("#33").hide();
+          }
+        if ( this.value == 'Single Series for All Accounts')
+       
+        {
+            $("#6").show();
+            $("#7").show();
+        $("#8").hide();
+        $("#9").hide();
+        $("#10").hide();
+        $("#11").hide();
+        $("#12").hide();
+        $("#13").hide();
+        $("#14").hide();
+        $("#15").hide();
+        $("#16").hide();
+        $("#17").hide();
+        $("#18").hide();
+        $("#19").hide();
+        $("#20").hide();
+        $("#21").hide();
+        $("#22").hide();
+        $("#23").hide();
+        $("#24").hide();
+        $("#25").hide();
+        $("#26").hide();
+        $("#27").hide();
+        $("#28").hide();
+        $("#29").hide();
+        $("#30").hide();
+        $("#31").hide();
+        $("#32").hide();
+        $("#33").hide();
+        
+        }
+        if(this.value == 'Single Series for Deposite and Single Series for Loan account')
+        {
+            $("#8").show();
+            $("#9").show();
+            $("#10").show();
+            $("#11").show();
+
+        $("#6").hide();
+        $("#7").hide();
+       
+        $("#12").hide();
+        $("#13").hide();
+        $("#14").hide();
+        $("#15").hide();
+        $("#16").hide();
+        $("#17").hide();
+        $("#18").hide();
+        $("#19").hide();
+        $("#20").hide();
+        $("#21").hide();
+        $("#22").hide();
+        $("#23").hide();
+        $("#24").hide();
+        $("#25").hide();
+        $("#26").hide();
+        $("#27").hide();
+        $("#28").hide();
+        $("#29").hide();
+        $("#30").hide();
+        $("#31").hide();
+        $("#32").hide();
+        $("#33").hide();
+        }
+        if(this.value == 'Seprate Series for all accounts')
+        {
+        $("#12").show();
+        $("#13").show();
+        $("#14").show();
+        $("#15").show();
+        $("#16").show();
+        $("#17").show();
+        $("#18").show();
+        $("#19").show();
+        $("#20").show();
+        $("#21").show();
+        $("#22").show();
+        $("#23").show();
+        $("#24").show();
+        $("#25").show();
+        $("#26").show();
+        $("#27").show();
+        $("#28").show();
+        $("#29").show();
+        $("#30").show();
+        $("#31").show();
+        $("#32").show();
+        $("#33").show();
+
+        $("#6").hide();
+        $("#7").hide();
+        $("#8").hide();
+        $("#9").hide();
+        $("#10").hide();
+        $("#11").hide();
+        }
+     
+      });
+  });
+          </script>
+</head>
+
+<body>
+
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./">Logo</a>
+               
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                      <a href="dashboard.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Master Record</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="CompanyProfile.html">Company Profile</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="PaidUpCapital.html">Paid-up/Authorised Capital</a></li>
+                            <li><i class="fa fa-bars"></i><a href="#">Member Groupes</a></li>
+                            <li><i class="fa fa-share-square-o"></i><a href="DirectorsAndPromoters.html">Directores/Promoters</a></li>
+                            <li><i class="fa fa-id-card-o"></i><a href="Members.html">Members</a></li>
+                            <li><i class="fa fa-exclamation-triangle"></i><a href="#">Form 15G/15H</a></li>
+                            <li><i class="fa fa-spinner"></i><a href="#">Un-Encumbered Deposit</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Share Management</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="#">Transfer Share</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Allocate Share</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="menu-icon ti-email"></i>Single Deposit Window </a>
+                    </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Saving Accounts</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="#">Scheme</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Saving Account Application</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Approve Application</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Saving Account</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Virtual Account</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Recurring Deposit</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="#">RD Calculator</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Scheme</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Recurring Deposit Application</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Approve Application</a></li>
+                            <li><i class="fa fa-table"></i><a href="#">Recurring Deposite Account</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Fixed Deposit</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="#">Calculator</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">Scheme</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">FD Deposit Application</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">Approve Application</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">FD Deposite</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>MIS</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="#">Calculator</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">Scheme</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">MIS Deposit Application</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">Approve Application</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="#">MIS Application</a></li>
+                        </ul>
+                    </li>
+                   
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Gold Loan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="#">Calculator</a></li>
+                            <li><i class="menu-icon fa fa-area-chart"></i><a href="#">Scheme</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="#">Application</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="#">Approve Application</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="#">Disburse Application</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="#">Loan Accounts</a></li>
+                            
+                        </ul>
+                    </li>
+
+                  
+                </ul>
+            </div>
+        </nav>
+    </aside>
+
+    
+
+    <div id="right-panel" class="right-panel">
+
+      
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+
+                     
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+
+                           
+
+                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                    <div class="language-select dropdown" id="language-select">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
+                            <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
+                          
+                        </a>
+                        <div class="user-menu dropdown-menu">
+                            <li>
+                            <a class="nav-link" href="AccountSeries.html"><i class="fa fa-user"></i> Account Series</a>
+                        </li>
+
+                            <a class="nav-link" href="userManagement.html"><i class="fa fa-user"></i> User Management </a>
+
+                            <a class="nav-link" href="ApplicationSetting.html"><i class="fa fa-cog"></i> Application Setting</a>
+
+                            <a class="nav-link" href="SmsSetting.html"><i class="fa fa-cog"></i> SMS Setting</a>
+                            <a class="nav-link" href="emailSetting.html"><i class="fa fa-cog"></i> Email Setting</a>
+                            <a class="nav-link" href="tnc.html"><i class="fa fa-cog"></i> Terms & Conditions</a>
+                            <!-- <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Passbook Setting</a>
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Report Template Design</a>
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Holiday calendar</a>
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Debit Card Management</a>
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Debit Other management(bulk)</a>
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Other Settings</a> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+       
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Account Series</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li class="active"><a href="dashboard.html"> Dashboard </a> > Account Series</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">                
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container">
+                            
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>Document Name</th>
+                                    <th>Series Type</th>
+                                    <th>Prefix</th>
+                                    <th>Start Number</th>
+                                    <th>Format In Digits</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Employee Code No.</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixEmployeeCode"></td>
+                                    <td><input type="number" id="startNumberEmployeeCode"></td>
+                                    <td>
+                                        <select name="formatInDigitEmployeeCode" id="formateInDigitEmployeeCode" style="width: 100px;">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>      
+                                  <tr class="success">
+                                    <td>AGENT CODE NO.</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixAgentCode"></td>
+                                    <td><input type="number" id="startNumberAgentCode"></td>
+                                    <td>
+                                        <select name="formatInDigitAgentCode" id="formateInDigitAgentCode" style="width: 100px;">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+                                  <tr class="danger">
+                                    <td>VOUCHER NO.</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixVoucherNumber"></td>
+                                    <td><input type="number" id="startNumberVoucherNumber"></td>
+                                    <td>
+                                        <select name="formatInDigitsVoucherCode" id="formatInDigitsVoucherCode" style="width: 100px;">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+                                  <tr class="info">
+                                    <td>MEMBERSHIP NO.</td>
+                                    <td><input type="checkbox" id="seriesTypeMember"><label>Is Manual</label></td>
+                                    <td><input type="text" id="prefixMemberNumber"></td>
+                                    <td><input type="number" id="startNumberMembershipNumber"></td>
+                                    <td>
+                                        <select name="formatInDigitsMemberNumber" id="formateInDigitsMemberNumber" style="width: 100px;">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+                                  <tr class="warning">
+                                    <td>SERIES CONFIGURATION TYPE</td>
+                                    <td colspan="4">
+                                        <select name="formatInDigitsSeriesConfigurationType" id="formateInDigitsSeriesConfigurationType" style="width: 94%;">
+                                            <option value="select">select</option>
+                                            <option value="Single Series for All Accounts">Single Series for All Accounts</option>
+                                            <option value="Single Series for Deposite and Single Series for Loan account">Single Series for Deposite and Single Series for Loan account</option>
+                                            <option value="Seprate Series for all accounts" selected>Seprate Series for all accounts </option>
+                                          </select>
+                                    </td>
+                                    
+                                  </tr>
+                                  <tr class="active" id="6">
+                                    <td>APPLICATION NO (IF SINGLE SERIES)</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixApplicationNumber"></td>
+                                    <td><input type="number" id="startNumberApplicationNumber"></td>
+                                    <td>
+                                        <select name="formatInDigitsApplicationNumber" id="formateInDigitsApplicationNumber" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+                                  <tr class="active" id="7">
+                                    <td>ACCOUNT NO. (IF SINGLE SERIES)</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixAccountNumber"></td>
+                                    <td><input type="number" id="startNumberAccountNumber"></td>
+                                    <td>
+                                        <select name="formatInDigitsAccountNumber" id="formatInDigitsAccountNumber" style="width: 100px;">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+                                
+
+                                  <tr class="active" id="8">
+                                    <td>DEPOSIT APPLICATION NO</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixDepositApplicationNumber"></td>
+                                    <td><input type="number" id="startNumberDepositApplicationNumber"></td>
+                                    <td>
+                                        <select name="formatInDigitsDepositApplicationNumber" id="formatInDigitsDepositApplicationNumber" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+                               
+
+                                  <tr class="active" id="9" >
+                                    <td>DEPOSIT ACCOUNT NO.</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixDepositAccountNumber"></td>
+                                    <td><input type="number" id="startNumberDepositAccountNumber"></td>
+                                    <td>
+                                        <select name="formatInDigitsDepositAccountNumber" id="formatInDigitsDepositAccountNumber" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                <tr class="active" id="10">
+                                    <td>LOAN APPLICATION NO</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixLoanApplicationNumber"></td>
+                                    <td><input type="number" id="startNumberLoanApplicationNumber"></td>
+                                    <td>
+                                        <select name="formatInDigitsLoanApplicationNumber" id="formatInDigitsLoanApplicationNumber" style="width: 100px;">
+                                            <option value="">Select</option>
+                                           
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="11">
+                                    <td>LOAN ACCOUNT NO.</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixLoanAccountNumber"></td>
+                                    <td><input type="number" id="startNumberLoanAccountNumber"></td>
+                                    <td>
+                                        <select name="formatInDigitsLoanAccountNumber" id="formatInDigitsLoanAccountNumber" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+
+                                  <tr class="active" id="12">
+                                    <td>SAVING APPLICATION</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixSavingApplication"></td>
+                                    <td><input type="number" id="startNumberSavingApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsSavingApplication" id="formatInDigitsSavingApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+                                  <tr class="active" id="13">
+                                    <td>SAVING ACCOUNT</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixSavingAccount"></td>
+                                    <td><input type="number" id="startNumberSavingAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsSavingAccount" id="formatInDigitsSavingAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+                                  <tr class="active" id="14">
+                                    <td>RECURRING DEPOSIT APPLICATION</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixRecurringDepositApplication"></td>
+                                    <td><input type="number" id="startNumberRecurringDepositApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsRecurringDepositApplication" id="formatInDigitsRecurringDepositApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="15">
+                                    <td>RECURRING DEPOSIT ACCOUNT	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixRecurringDepositAccount"></td>
+                                    <td><input type="number" id="startNumberRecurringDepositAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsRecurringDepositAccount" id="formatInDigitsRecurringDepositAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="16">
+                                    <td>FIXED DEPOSIT APPLICATION</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixFixedDepositApplication"></td>
+                                    <td><input type="number" id="startNumberFixedDepositApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsFixedDepositApplication" id="formatInDigitsFixedDepositApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="17">
+                                    <td>FIXED DEPOSIT ACCOUNT	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixFixedDepositAccount"></td>
+                                    <td><input type="number" id="startNumberFixedDepositAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsFixedDepositAccount" id="formatInDigitsFixedDepositAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="18">
+                                    <td>MIS DEPOSIT APPLICATION	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixMisDepositApplication"></td>
+                                    <td><input type="number" id="startNumberMisDepositApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsMISDepositApplication" id="formatInDigitsMISDepositApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="19">
+                                    <td>MIS DEPOSIT ACCOUNT	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixMisDepositAccount"></td>
+                                    <td><input type="number" id="startNumberMisDepositAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsMISDepositAccount" id="formatInDigitsMISDepositAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  
+
+                                  <tr class="active" id="20">
+                                    <td>GOLD LOAN APPLICATION	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixGoldLoanApplication"></td>
+                                    <td><input type="number" id="startNumberGoldLoanApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsApplicationNumber" id="formatInDigitsApplicationNumber" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="21">
+                                    <td>GOLD LOAN ACCOUNT	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixGoldLoanAccount"></td>
+                                    <td><input type="number" id="startNumberGoldLoanAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsGoldLoanAccount" id="formatInDigitsGoldLoanAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="22">
+                                    <td>PROPERTY LOAN APPLICATION</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixPropertyLoanApplication"></td>
+                                    <td><input type="number" id="startNumberPropertyLoanApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsPropertyLoanApplication" id="formatInDigitsPropertyLoanApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+
+                                  
+                                 
+
+                                  <tr class="active" id="23">
+                                    <td>PROPERTY LOAN ACCOUNT		</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixPropertyLoanAccount"></td>
+                                    <td><input type="number" id="startNumberPropertyLoanAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsPropertyLoanAccount" id="formatInDigitsPropertyLoanAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="24">
+                                    <td>DEPOSIT LOAN APPLICATION	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixDepositLoanApplication"></td>
+                                    <td><input type="number" id="startNumberDepositLoanApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsDepositLoanApplication" id="formatInDigitsDepositLoanApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="25">
+                                    <td>DEPOSIT LOAN ACCOUNT</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixDepositLoanAccount"></td>
+                                    <td><input type="number" id="startNumberDepositLoanAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsDepositLoanAccount" id="formatInDigitsDepositLoanAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="26">
+                                    <td>BUSINESS LOAN APPLICATION</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixBusinessLoanApplication"></td>
+                                    <td><input type="number" id="startNumberBusinessLoanApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsBusinessApplication" id="formatInDigitsBusinessApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="3">2</option>
+                                            <option value="4">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="27">
+                                    <td>BUSINESS LOAN ACCOUNT		</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixBusinessLoanAccount"></td>
+                                    <td><input type="number" id="startNumberBusinessLoanAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsBusinessLoanAccount" id="formatInDigitsBusinessLoanAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="28">
+                                    <td>CASH CREDIT APPLICATION	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixCashCreditApplication"></td>
+                                    <td><input type="number" id="startNumberCashCreditApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsCashCreditApplication" id="formatInDigitsCashCreditApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="29">
+                                    <td>CASH CREDIT ACCOUNT	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixCashCreditAccount"></td>
+                                    <td><input type="number" id="startNumberCashcreditAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsCashCreditAccount" id="formatInDigitsCashCreditAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  
+                                  <tr class="active" id="30">
+                                    <td>FIXED EMI LOAN APPLICATION		</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixFixedEmiLoanApplication"></td>
+                                    <td><input type="number" id="startNumberFixedEmiLoanApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsFixedEmiLoanApplication" id="formatInDigitsFixedEmiLoanApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="31">
+                                    <td>FIXED EMI LOAN ACCOUNT	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixFixedEmilLoanAccount"></td>
+                                    <td><input type="number" id="startNumberFixedEmiLoanAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsFixedEmiLoanAccount" id="formatInDigitsFixedEmiLoanAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="32">
+                                    <td>NO EMI LOAN APPLICATION		</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixNoEmiLoanApplication"></td>
+                                    <td><input type="number" id="startNumberNoEmiLoanApplication"></td>
+                                    <td>
+                                        <select name="formatInDigitsNoEmiLoanApplication" id="formatInDigitsNoEmiLoanApplication" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+                                  <tr class="active" id="33">
+                                    <td>NO EMI LOAN ACCOUNT	</td>
+                                    <td></td>
+                                    <td><input type="text" id="prefixNoEmiLoanAccount"></td>
+                                    <td><input type="number" id="startNumberNoEmiLoanAccount"></td>
+                                    <td>
+                                        <select name="formatInDigitsNoEmiLoanAccount" id="formatInDigitsNoEmiLoanAccount" style="width: 100px;">
+                                            <option value="">Select</option>
+                                            
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                    </td>
+                                  </tr>
+
+
+
+                                  
+
+                                </tbody>
+                              </table>
+                              
+                                  
+                              <button type="button" class="btn btn-primary" onclick="saveAccountSeries()">Save</button>
+                             
+
+
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
+        </div> <!-- .content -->
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/widgets.js"></script>
+    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+   
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>

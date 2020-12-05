@@ -1,0 +1,79 @@
+function saveTransactionSettingsApproved() {
+    var isActive = $("#isActiveApproved").val();
+    var setting_type="Transactions";
+    var event="Approved";
+    var message="DEAR CUSTOMER, YOUR ACCOUNT #ACCOUNTNO# HAS BEEN #TRANSACTIONTYPE# WITH INR #TRANSACTIONAMOUNT# ON #TRANSACTIONDATE#. THE AVAILABLE BALANCE IS INR #AVAILABLEBALANCE#."   
+    
+            $.ajax({
+                url: 'http://139.59.8.1/api/',
+                type: 'POST',
+                "datatype": "json",             
+               "data": { 
+                   setting_type: setting_type, 
+                   settings:"[{event:event,message:message,isActive:isActive}]",                              
+            },
+             
+                success: function (result) {
+                    $('#divLoader').hide();
+
+                    if (result.Status == true) {
+                        toastr.success("Mail sent successfully to all Pre-Primary schools");
+                        $('#divLoader').hide();
+
+                    }
+                    else if (result.Status == false) {
+
+                        alert("Something went wrong");
+                        $('#divLoader').hide();
+
+                    }
+
+
+                }
+            });      
+}
+
+function saveTransactionSettingsDisapproved() {
+    var isActiveTransactionPending = $("#isActiveTransactionPending").val();
+    var setting_type="Transactions";
+    var event="Dissapproved";
+    var message="DEAR CUSTOMER, YOUR TRANSACTION OF INR #TRANSACTIONAMOUNT# DATED #TRANSACTIONDATE# IS DISAPPROVED"   
+    
+            $.ajax({
+                url: 'http://139.59.8.1/api/',
+                type: 'POST',
+                "datatype": "json",             
+               "data": { 
+                request: [
+                    {setting_type:"transactions",event:'Pending',isActive:isActive},
+                    {setting_type:"transactions",event:"Approved",isActive:isActive},
+                    {setting_type:"transactions",event:"Dissapproved",isActive:isActive},
+                    {setting_type:"saving_account",event:"Open",isActive:isActive},
+                    {setting_type:"saving_account",event:"Approved",isActive:isActive},
+                    {setting_type:"saving_account",event:"Not_Approved",isActive:isActive},
+                    {setting_type:"saving_account",event:"Approved",isActive:isActive},
+                ]
+                  // setting_type: setting_type, 
+                  // settings:"[{event:event,message:message,isActive:isActive}]",                              
+            },
+             
+                success: function (result) {
+                    $('#divLoader').hide();
+
+                    if (result.Status == true) {
+                        toastr.success("Mail sent successfully to all Pre-Primary schools");
+                        $('#divLoader').hide();
+
+                    }
+                    else if (result.Status == false) {
+
+                        alert("Something went wrong");
+                        $('#divLoader').hide();
+
+                    }
+
+
+                }
+            });      
+}
+
